@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW X3 | AutoNexus</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+<%- include('partials/car-style') %>
+</head>
+<body>
+    <!-- Navbar -->
+<%- include('partials/navbar') %>
+
+    <div class="car-details-container">
+        <h1 class="car-title">BMW X3 <span style="font-size:1.1rem; font-weight:400;">(Rs 68.50 Lakh*)</span></h1>
+        <!-- Car Image Viewer -->
+        <div class="image-viewer-container">
+            <button class="image-viewer-btn left" onclick="prevImage()" aria-label="Previous Image">&#8592;</button>
+            <img src="/images/x3-1.jpg" class="image-viewer-img" id="carImage" alt="BMW X3">
+            <button class="image-viewer-btn right" onclick="nextImage()" aria-label="Next Image">&#8594;</button>
+        </div>
+        <!-- Car Description -->
+        <div class="car-description">
+            <p>
+                The BMW X3 is a luxury mid-size SUV that offers a blend of performance, comfort, and practicality. It features powerful petrol and diesel engine options, advanced xDrive all-wheel drive, and a spacious, tech-rich cabin.
+            </p>
+        </div>
+        <!-- Car Info Tables -->
+        <div class="row justify-content-center align-items-stretch">
+            <div class="col-md-6 d-flex">
+                <div class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center" style="height:340px; min-height:340px;">
+                    <div class="section-heading">Economy & Performance</div>
+                    <table class="car-info-table">
+                        <thead>
+                            <tr>
+                                <th>Economy</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mileage: 16.55 kmpl</td>
+                                <td>Engine: 1995 cc / 1998 cc</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Type: Diesel/Petrol</td>
+                                <td>BHP: 190 (Diesel) / 252 (Petrol)</td>
+                            </tr>
+                            <tr>
+                                <td>Service Cost: Rs 12,000/yr</td>
+                                <td>No. of cylinders: 4</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank: 60L</td>
+                                <td>No. of Gears: 8 Speed Auto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center" style="height:340px; min-height:340px;">
+                    <div class="section-heading">Comfort & Safety</div>
+                    <table class="car-info-table">
+                        <thead>
+                            <tr>
+                                <th>Comfort</th>
+                                <th>Safety</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transmission: Automatic</td>
+                                <td>ABS: Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Rear AC vents: Yes</td>
+                                <td>Driver Airbag: Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Seating capacity: 5</td>
+                                <td>Parking Sensor: Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Bootspace: 550L</td>
+                                <td>Air Bag: Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Highlights -->
+        <div class="section-heading">X3 Highlights</div>
+        <div class="car-description">
+            <ul>
+                <li>Powerful petrol and diesel engine options.</li>
+                <li>Advanced xDrive all-wheel drive system.</li>
+                <li>Spacious and luxurious interiors.</li>
+                <li>Comprehensive safety and tech features.</li>
+            </ul>
+        </div>
+        <!-- Book Button Centered -->
+        <div class="text-center">
+            <a href="/booking" class="book-btn">Book Your Car</a>
+        </div>
+    </div>
+    <!-- Footer -->
+<%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Image viewer logic
+        const images = [
+            "/images/x3-1.jpg",
+            "/images/x3-2.jpg",
+            "/images/x3-3.jpg",
+            "/images/x3-4.jpg"
+        ];
+        let currentImg = 0;
+        const carImage = document.getElementById('carImage');
+        function showImage(idx) {
+            currentImg = (idx + images.length) % images.length;
+            carImage.src = images[currentImg];
+        }
+        function prevImage() {
+            showImage(currentImg - 1);
+        }
+        function nextImage() {
+            showImage(currentImg + 1);
+        }
+        showImage(0);
+    </script>
+</body>
+</html>

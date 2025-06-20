@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <title>Aston Martin Vantage | AutoNexus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('partials/car-style') %>
+  </head>
+  <body>
+    <!-- Navbar -->
+<%- include('partials/navbar') %>
+
+    <div class="car-details-container">
+      <h1 class="car-title">
+        Aston Martin Vantage
+        <span style="font-size: 1.1rem; font-weight: 400">(Rs 2.95 Cr*)</span>
+      </h1>
+      <!-- Car Image Viewer -->
+      <div class="image-viewer-container">
+        <button
+          class="image-viewer-btn left"
+          onclick="prevImage()"
+          aria-label="Previous Image"
+        >
+          &#8592;
+        </button>
+        <img
+          src="/images/vantage-1.jpg"
+          class="image-viewer-img"
+          id="carImage"
+          alt="Aston Martin Vantage"
+        />
+        <button
+          class="image-viewer-btn right"
+          onclick="nextImage()"
+          aria-label="Next Image"
+        >
+          &#8594;
+        </button>
+      </div>
+      <!-- Car Description -->
+      <div class="car-description">
+        <p>
+          The Aston Martin Vantage is a luxury sports car that delivers
+          thrilling performance, sharp handling, and iconic British design.
+          Powered by a twin-turbo V8, it features a driver-focused cockpit,
+          advanced technology, and everyday usability.
+        </p>
+      </div>
+      <!-- Car Info Tables -->
+      <div class="row justify-content-center align-items-stretch">
+        <div class="col-md-6 d-flex">
+          <div
+            class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center"
+            style="height: 340px; min-height: 340px"
+          >
+            <div class="section-heading">Economy & Performance</div>
+            <table class="car-info-table">
+              <thead>
+                <tr>
+                  <th>Economy</th>
+                  <th>Performance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mileage: 8.6 kmpl</td>
+                  <td>Engine: 3982 cc (V8)</td>
+                </tr>
+                <tr>
+                  <td>Fuel Type: Petrol</td>
+                  <td>BHP: 503</td>
+                </tr>
+                <tr>
+                  <td>Service Cost: Rs 55,000/yr</td>
+                  <td>No. of cylinders: 8</td>
+                </tr>
+                <tr>
+                  <td>Fuel Tank: 73L</td>
+                  <td>No. of Gears: 8 Speed Automatic</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div
+            class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center"
+            style="height: 340px; min-height: 340px"
+          >
+            <div class="section-heading">Comfort & Safety</div>
+            <table class="car-info-table">
+              <thead>
+                <tr>
+                  <th>Comfort</th>
+                  <th>Safety</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transmission: Automatic</td>
+                  <td>ABS: Yes</td>
+                </tr>
+                <tr>
+                  <td>Rear AC vents: No</td>
+                  <td>Driver Airbag: Yes</td>
+                </tr>
+                <tr>
+                  <td>Seating capacity: 2</td>
+                  <td>Parking Sensor: Yes</td>
+                </tr>
+                <tr>
+                  <td>Bootspace: 350L</td>
+                  <td>Air Bag: Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Highlights -->
+      <div class="section-heading">Vantage Highlights</div>
+      <div class="car-description">
+        <ul>
+          <li>Iconic British sports car design.</li>
+          <li>Twin-turbo V8 with thrilling performance.</li>
+          <li>Driver-focused cockpit and advanced tech.</li>
+          <li>Everyday usability and comfort.</li>
+        </ul>
+      </div>
+      <!-- Book Button Centered -->
+      <div class="text-center">
+        <a href="/booking" class="book-btn">Book Your Car</a>
+      </div>
+    </div>
+    <!-- Footer -->
+<%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Image viewer logic
+      const images = [
+        "/images/va-1.jpg",
+        "/images/va-2.jpg",
+        "/images/va-3.jpg",
+        "/images/va-4.jpg",
+      ];
+      let currentImg = 0;
+      const carImage = document.getElementById("carImage");
+      function showImage(idx) {
+        currentImg = (idx + images.length) % images.length;
+        carImage.src = images[currentImg];
+      }
+      function prevImage() {
+        showImage(currentImg - 1);
+      }
+      function nextImage() {
+        showImage(currentImg + 1);
+      }
+      showImage(0);
+    </script>
+  </body>
+</html>

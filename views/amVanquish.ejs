@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta charset="UTF-8" />
+    <title>Aston Martin Vanquish | AutoNexus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+      <%- include('partials/car-style') %>
+  </head>
+  <body>
+    <!-- Navbar -->
+<%- include('partials/navbar') %>
+
+    <div class="car-details-container">
+      <h1 class="car-title">
+        Aston Martin Vanquish
+        <span style="font-size: 1.1rem; font-weight: 400">(Rs 3.85 Cr*)</span>
+      </h1>
+      <!-- Car Image Viewer -->
+      <div class="image-viewer-container">
+        <button
+          class="image-viewer-btn left"
+          onclick="prevImage()"
+          aria-label="Previous Image"
+        >
+          &#8592;
+        </button>
+        <img
+          src="/images/vanquish-1.jpg"
+          class="image-viewer-img"
+          id="carImage"
+          alt="Aston Martin Vanquish"
+        />
+        <button
+          class="image-viewer-btn right"
+          onclick="nextImage()"
+          aria-label="Next Image"
+        >
+          &#8594;
+        </button>
+      </div>
+      <!-- Car Description -->
+      <div class="car-description">
+        <p>
+          The Aston Martin Vanquish is a flagship grand tourer, renowned for its
+          stunning design, V12 power, and luxurious interiors. It delivers
+          thrilling performance, advanced technology, and the exclusivity
+          expected from the Aston Martin marque.
+        </p>
+      </div>
+      <!-- Car Info Tables -->
+      <div class="row justify-content-center align-items-stretch">
+        <div class="col-md-6 d-flex">
+          <div
+            class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center"
+            style="height: 340px; min-height: 340px"
+          >
+            <div class="section-heading">Economy & Performance</div>
+            <table class="car-info-table">
+              <thead>
+                <tr>
+                  <th>Economy</th>
+                  <th>Performance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mileage: 8.0 kmpl</td>
+                  <td>Engine: 5935 cc (V12)</td>
+                </tr>
+                <tr>
+                  <td>Fuel Type: Petrol</td>
+                  <td>BHP: 568</td>
+                </tr>
+                <tr>
+                  <td>Service Cost: Rs 70,000/yr</td>
+                  <td>No. of cylinders: 12</td>
+                </tr>
+                <tr>
+                  <td>Fuel Tank: 78L</td>
+                  <td>No. of Gears: 8 Speed Automatic</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div
+            class="info-box flex-fill mx-2 h-100 d-flex flex-column justify-content-center"
+            style="height: 340px; min-height: 340px"
+          >
+            <div class="section-heading">Comfort & Safety</div>
+            <table class="car-info-table">
+              <thead>
+                <tr>
+                  <th>Comfort</th>
+                  <th>Safety</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transmission: Automatic</td>
+                  <td>ABS: Yes</td>
+                </tr>
+                <tr>
+                  <td>Rear AC vents: Yes</td>
+                  <td>Driver Airbag: Yes</td>
+                </tr>
+                <tr>
+                  <td>Seating capacity: 2+2</td>
+                  <td>Parking Sensor: Yes</td>
+                </tr>
+                <tr>
+                  <td>Bootspace: 368L</td>
+                  <td>Air Bag: Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Highlights -->
+      <div class="section-heading">Vanquish Highlights</div>
+      <div class="car-description">
+        <ul>
+          <li>Flagship grand tourer with V12 power.</li>
+          <li>Stunning design and luxurious interiors.</li>
+          <li>Exhilarating performance and exclusivity.</li>
+          <li>Advanced technology and comfort features.</li>
+        </ul>
+      </div>
+      <!-- Book Button Centered -->
+      <div class="text-center">
+        <a href="/booking" class="book-btn">Book Your Car</a>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h5 class="fw-bold">AutoNexus</h5>
+            <p class="mb-1">
+              Your trusted partner for finding the perfect car.
+            </p>
+            <small
+              >&copy; <%= new Date().getFullYear() %> AutoNexus. All rights
+              reserved.</small
+            >
+          </div>
+          <div class="col-md-3 mb-2">
+            <h6 class="fw-bold">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Brands</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="fw-bold">Contact</h6>
+            <ul class="list-unstyled">
+              <li>
+                Email:
+                <a href="mailto:autonexus@gmail.com">autonexus@gmail.com</a>
+              </li>
+              <li>Phone: +91 7378472876</li>
+              <li>Location: Bengaluru, India</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>AutoNexus - Made by Shreyas Patil & Aditya Dube</small>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Image viewer logic
+      const images = [
+        "/images/v-1.jpg",
+        "/images/v-2.jpg",
+        "/images/v-3.jpg",
+        "/images/v-4.jpg",
+      ];
+      let currentImg = 0;
+      const carImage = document.getElementById("carImage");
+      function showImage(idx) {
+        currentImg = (idx + images.length) % images.length;
+        carImage.src = images[currentImg];
+      }
+      function prevImage() {
+        showImage(currentImg - 1);
+      }
+      function nextImage() {
+        showImage(currentImg + 1);
+      }
+      showImage(0);
+    </script>
+  </body>
+</html>
