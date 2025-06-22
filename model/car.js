@@ -1,13 +1,16 @@
-const mongoose = require('mongoose');
-const cardetail = require('./cardetail');
-const Schema = mongoose.Schema
-// const passportLocalMongoose = require('passport-local-mongoose');
-const Car = new Schema({
-    company: {
-        type: String
-    },
-    carType:[cardetail.Cardetail]
-})
+const mongoose = require("mongoose");
+const { Cardetail } = require("./cardetail");
 
-  
-module.exports = mongoose.model('Car', Car);
+const carSchema = new mongoose.Schema({
+  company: {
+    type: String
+  },
+  logo: {
+    type: String,
+    required: true
+  },
+  carType: [Cardetail] 
+});
+
+module.exports = mongoose.model("Car", carSchema);
+
