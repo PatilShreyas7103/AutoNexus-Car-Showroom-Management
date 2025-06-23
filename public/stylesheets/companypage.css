@@ -130,3 +130,14 @@
   footer a:hover {
     text-decoration: underline;
   }
+  .navbar .btn-warning:hover,
+.navbar .btn-warning:focus {
+  background: #fbbf24 !important;
+  color: #0ea5e9 !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fbbf24 !important;
+}
