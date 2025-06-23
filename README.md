@@ -21,3 +21,7 @@
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB 
 - **Hosting:** Render.com
+
+## Contributers
+- Shreyas Patil
+- Aditya Dube
