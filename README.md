@@ -23,5 +23,5 @@
 - **Hosting:** Render.com
 
 ## Contributers
--> Shreyas Patil
--> Aditya Dube
+- Shreyas Patil
+- Aditya Dube
