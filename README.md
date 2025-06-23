@@ -22,6 +22,6 @@
 - **Database:** MongoDB 
 - **Hosting:** Render.com
 
-## Contributers
+## Contributors
 - Shreyas Patil
 - Aditya Dube
