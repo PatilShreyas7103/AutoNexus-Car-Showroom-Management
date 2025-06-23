@@ -17,7 +17,7 @@
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript (EJS)
+- **Frontend:** HTML, CSS, JavaScript 
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB 
 - **Hosting:** Render.com
